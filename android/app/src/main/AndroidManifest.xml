@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="mx.com.BuscadorSP"> 
+  android:targetSandboxVersion="2"
+  package="mx.com.buscadorsp"> 
 
     <uses-permission android:name="android.permission.INTERNET" />
 

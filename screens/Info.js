@@ -1,15 +1,16 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 
-const Calendario = () => {
+const Info = () => {
     return (
       <View style={styles.container}>
-        <Text>Calendario</Text>  
+        <Text>Información</Text>
+        
       </View>
     );
 };
 
-export default Calendario;
+export default Info;
 
 const styles = StyleSheet.create({
   container: {

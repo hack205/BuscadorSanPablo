@@ -13,7 +13,7 @@ import * as Animatable from 'react-native-animatable';
 import LinearGradient from 'react-native-linear-gradient';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
-
+import auth from "@react-native-firebase/app";
 import { useTheme } from 'react-native-paper';
 
 import { AuthContext } from '../components/context';
@@ -30,7 +30,7 @@ const SignInScreen = ({navigation}) => {
         isValidUser: true,
         isValidPassword: true,
     });
-
+    console.log("data");
     const { colors } = useTheme();
 
     const { signIn } = React.useContext(AuthContext);

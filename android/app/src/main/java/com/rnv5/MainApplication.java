@@ -1,4 +1,4 @@
-package mx.com.BuscadorSP;
+package mx.com.buscadorsp;
 
 import android.app.Application;
 import android.content.Context;

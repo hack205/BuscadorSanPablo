@@ -29,6 +29,7 @@ import SettingsScreen from './screens/SettingsScreen';
 import BookmarkScreen from './screens/BookmarkScreen';
 import Notas from './screens/Notas';
 import Calendario from './screens/Calendario';
+import Informacion from './screens/Info';
 
 
 import { AuthContext } from './components/context';
@@ -176,7 +177,8 @@ const App = () => {
           <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
           <Drawer.Screen name="BookmarkScreen" component={BookmarkScreen} />
           <Drawer.Screen name="Notas" component={Notas} />
-          <Drawer.Screen name="Calendario" component={Notas} />
+          <Drawer.Screen name="Calendario" component={Calendario} />
+          <Drawer.Screen name="Informacion" component={Informacion} />
         </Drawer.Navigator>
       )
     :

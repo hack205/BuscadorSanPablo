@@ -1,4 +1,4 @@
-package mx.com.BuscadorSP;
+package mx.com.buscadorsp;
 import com.facebook.react.ReactActivity;
 
 public class MainActivity extends ReactActivity {

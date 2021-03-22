@@ -1,31 +1,38 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet, StatusBar } from 'react-native';
-import { useTheme } from '@react-navigation/native';
-import ImageView from 'react-native-image-view';
-
+import { View, Text, Button, StyleSheet, StatusBar, ScrollView } from 'react-native';
+import { Card, CardTitle, CardContent, CardAction, CardButton, CardImage } from 'react-native-cards';
 const HomeScreen = ({ navigation }) => {
-
-  const { colors } = useTheme();
-
-  const theme = useTheme();
-  const images = [
-    {
-      source: {
-        uri: 'https://cdn.pixabay.com/photo/2017/08/17/10/47/paris-2650808_960_720.jpg',
-      },
-      title: 'Paris',
-      width: 806,
-      height: 720,
-    },
-  ];
   return (
-    <View style={styles.container}>
-      <StatusBar barStyle={theme.dark ? "light-content" : "dark-content"} />
-      <ImageView
-        images={images}
-        imageIndex={0}
-        renderFooter={(currentImage) => (<View><Text>My footer</Text></View>)}
-      />
+    <View>
+      <ScrollView>
+        <Card>
+          <CardImage
+            source={
+              require('../assets/Auxiliares/Javier.jpg')
+            }
+            title="Francisco Javier Varela Sosa"
+          />
+          <CardTitle
+            subtitle="SubCordinador"
+          />
+          
+          <CardAction
+            separator={true}
+            inColumn={false}>
+            <CardButton
+              onPress={() => {navigation.navigate('Informacion')}}
+              title="Información"
+              color="#FEB557"
+            />
+            <CardButton
+              onPress={() => { }}
+              title="Compartir"
+              color="#FEB557"
+            />
+          </CardAction>
+        </Card>
+
+      </ScrollView>
     </View>
   );
 };
