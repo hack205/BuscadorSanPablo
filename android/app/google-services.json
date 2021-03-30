@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "815830263205",
+    "project_id": "production-41a71",
+    "storage_bucket": "production-41a71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:815830263205:android:b0334a3731c53f4b1d344c",
+        "android_client_info": {
+          "package_name": "com.SanPablo.mjvc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "815830263205-l8h2nosmjequlq4p2sj2n32d7ijhkh02.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfCGWt2A1omtM4pzBf0WPzZ48El4mcSE0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "815830263205-l8h2nosmjequlq4p2sj2n32d7ijhkh02.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
