@@ -1,9 +1,11 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet, StatusBar, ScrollView } from 'react-native';
 import { Card, CardTitle, CardContent, CardAction, CardButton, CardImage } from 'react-native-cards';
+import MenuMap from '../components/MenuMap';
 const HomeScreen = ({ navigation }) => {
+  const [visibleModal, setVisibleModal] =  React.useState(false);
   return (
-    <View>
+    <View style={styles.container}>
       <ScrollView>
         <Card>
           <CardImage
@@ -31,8 +33,9 @@ const HomeScreen = ({ navigation }) => {
             />
           </CardAction>
         </Card>
-
+        
       </ScrollView>
+      <MenuMap visibleModal={visibleModal} setVisibleModal={setVisibleModal}/>
     </View>
   );
 };
@@ -42,7 +45,6 @@ export default HomeScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center'
   },
 });

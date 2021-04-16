@@ -1,28 +1,40 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import { View, StyleSheet, Text,Dimensions } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+import IconF from 'react-native-vector-icons/FontAwesome';
 
-const CustomHeader = ({openDrawer}) => {
+const {height, width} = Dimensions.get('window');
+const CustomHeader = ({ openDrawer }) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <View style={styles.menu}>
-            <Icon.Button
-                name="ios-menu"
-                size={25}
-                backgroundColor="transparent"
-                underlayColor="transparent"
-                onPress={() => {
-                  openDrawer();
-                }}
-            />
+          <Icon.Button
+            name="ios-menu"
+            size={25}
+            backgroundColor="transparent"
+            onPress={() => openDrawer()}
+          />
         </View>
+        <View style={styles.options}>
+          <View style={styles.optionsIcons}>
+            <IconF.Button
+              name="user-plus"
+              size={20}
+              backgroundColor="transparent"
+              onPress={() => openDrawer()}
+            />
+          </View>
+        </View>
+        
       </View>
     </View>
   );
 };
 
+
 export default CustomHeader;
+
 
 const styles = StyleSheet.create({
   container: {
@@ -33,6 +45,30 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   menu: {
+    flex: 2,
+  },
+  title: {
+    flex: 2,
+  },
+  options: {
+    flexDirection: 'row',
+    flex: 2,
+    
+  },
+  optionsIcons: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginLeft: width * 0.72,
+  },
+  iconInfo: {
     flex: 1,
-  }
+  },
+  iconHere: {
+    flex: 1,
+  },
+  iconRoute: {
+    flex: 1,
+  },
+
 });
+
