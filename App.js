@@ -19,7 +19,12 @@ import {DrawerContent} from './screens/DrawerContent';
 import MainTabScreen from './screens/MainTabScreen';
 import SupportScreen from './screens/SupportScreen';
 import SettingsScreen from './screens/SettingsScreen';
+import RegisterUserScreen from './screens/RegisterUser';
+import NotasScreen from './screens/Notas';
+import CalendarioScreen from './screens/Calendario';
+import InfoScreen from './screens/Info';
 import {AuthContext} from './components/context';
+
 
 import RootStackScreen from './screens/RootStackScreen';
 
@@ -165,10 +170,11 @@ const App = () => {
                 drawerContent={props => <DrawerContent {...props} />}>
                 <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
                 <Drawer.Screen name="SupportScreen" component={SupportScreen} />
-                <Drawer.Screen
-                  name="SettingsScreen"
-                  component={SettingsScreen}
-                />
+                <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
+                <Drawer.Screen name="RegisterUserScreen" component={RegisterUserScreen} />
+                <Drawer.Screen name="NotasScreen" component={NotasScreen} />
+                <Drawer.Screen name="CalendarioScreen" component={CalendarioScreen} />
+                <Drawer.Screen name="InfoScreen" component={InfoScreen} />
               </Drawer.Navigator>
           ) : (
             <RootStackScreen />

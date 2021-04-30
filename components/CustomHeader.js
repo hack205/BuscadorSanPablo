@@ -2,9 +2,13 @@ import React from 'react';
 import { View, StyleSheet, Text,Dimensions } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import IconF from 'react-native-vector-icons/FontAwesome';
+import {
+  DrawerContentScrollView,
+  DrawerItem
+} from '@react-navigation/drawer';
 
 const {height, width} = Dimensions.get('window');
-const CustomHeader = ({ openDrawer }) => {
+const CustomHeader = ({ openDrawer, navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -22,7 +26,7 @@ const CustomHeader = ({ openDrawer }) => {
               name="user-plus"
               size={20}
               backgroundColor="transparent"
-              onPress={() => openDrawer()}
+              onPress={() =>  {navigation.navigate('Home')}}
             />
           </View>
         </View>

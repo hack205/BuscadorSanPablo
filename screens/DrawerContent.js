@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
+
 import {
     useTheme,
     Avatar,
@@ -99,7 +100,7 @@ export function DrawerContent(props) {
                     )}
                     label="Notas"
                     onPress={() => {
-                    props.navigation.navigate('Notas');
+                    props.navigation.navigate('NotasScreen');
                     }}
                 />
                 <DrawerItem
@@ -108,7 +109,7 @@ export function DrawerContent(props) {
                     )}
                     label="Calendario"
                     onPress={() => {
-                    props.navigation.navigate('Calendario');
+                    props.navigation.navigate('CalendarioScreen');
                     }}
                 />                   
                 

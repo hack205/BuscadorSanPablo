@@ -2,8 +2,10 @@ import React from 'react';
 import { View, Text, Button, StyleSheet, StatusBar, ScrollView } from 'react-native';
 import { Card, CardTitle, CardContent, CardAction, CardButton, CardImage } from 'react-native-cards';
 import MenuMap from '../components/MenuMap';
+import Modal from '../components/Modal';
 const HomeScreen = ({ navigation }) => {
-  const [visibleModal, setVisibleModal] =  React.useState(false);
+  const [visibleModal, setVisibleModal] = React.useState(false);
+  const [TipeModal, setTipeModal] = React.useState('');
   return (
     <View style={styles.container}>
       <ScrollView>
@@ -22,7 +24,7 @@ const HomeScreen = ({ navigation }) => {
             separator={true}
             inColumn={false}>
             <CardButton
-              onPress={() => {navigation.navigate('Informacion')}}
+              onPress={() => {navigation.navigate('InfoScreen')}}
               title="Información"
               color="#FEB557"
             />
@@ -35,7 +37,13 @@ const HomeScreen = ({ navigation }) => {
         </Card>
         
       </ScrollView>
-      <MenuMap visibleModal={visibleModal} setVisibleModal={setVisibleModal}/>
+      <Modal
+        visibleModal={visibleModal}
+        setVisibleModal={setVisibleModal}
+        setTipeModal={setTipeModal}
+        TipeModal={TipeModal}
+      />
+      <MenuMap visibleModal={visibleModal} setVisibleModal={setVisibleModal} TipeModal={TipeModal} setTipeModal={setTipeModal}/>
     </View>
   );
 };
